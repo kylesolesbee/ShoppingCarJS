@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Shopping List</h1>
+    
+    <div>
+        <label for="item">Select an item:</label>
+        <select id="item">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+        </select>
+    
+        <span>Price: <span id="displayPrice"></span></span>
+    
+        <button onclick="addItem()">Add Item</button>
+    </div>
+    
+    <h2>Shopping Cart</h2>
+<ul id="shoppingList"></ul>
+
+<p>Subtotal: $<span id="subtotal">0.00</span></p>
+<p>Sales Tax: $<span id="salesTax">0.00</span></p>
+<p>Grand Total: $<span id="grandTotal">0.00</span></p>
+
+<button onclick="checkOut()">Check Out</button>
+
+<script src="ShoppingCart.js"></script>
+<script>
+    document.getElementById("item").addEventListener("change", updatePrice);
+</script>
+</body>
+</html>
